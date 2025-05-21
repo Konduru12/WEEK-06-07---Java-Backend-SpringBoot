@@ -1,0 +1,13 @@
+package com.address.spring.service;
+
+import com.address.spring.dto.AddressBookDto;
+import com.address.spring.model.AddressBookData;
+import java.util.List;
+
+public interface AddressBookService {
+    AddressBookData createAddress(AddressBookDto dto);
+    List<AddressBookData> getAllData();
+    AddressBookData getById(int id);
+    AddressBookData updateById(int id, AddressBookDto dto);
+    String deleteById(int id);
+}

@@ -1,0 +1,5 @@
+package com.address.spring.model;
+
+public class AddressBookDate {
+
+}

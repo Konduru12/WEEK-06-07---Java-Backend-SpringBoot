@@ -1,0 +1,8 @@
+package com.address.spring.dto;
+
+public class AddressBookDto {
+    private String name;
+    private String address;
+
+    
+}

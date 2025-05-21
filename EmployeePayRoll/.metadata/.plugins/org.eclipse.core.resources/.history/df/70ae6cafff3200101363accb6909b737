@@ -1,0 +1,9 @@
+package com.address.spring.model;
+
+public class AddressBookData {
+    private int id;
+    private String name;
+    private String address;
+
+   
+}

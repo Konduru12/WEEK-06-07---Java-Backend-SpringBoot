@@ -1,0 +1,5 @@
+package com.employee.employeepayroll.repository;
+
+public class EmployeeRepository {
+
+}

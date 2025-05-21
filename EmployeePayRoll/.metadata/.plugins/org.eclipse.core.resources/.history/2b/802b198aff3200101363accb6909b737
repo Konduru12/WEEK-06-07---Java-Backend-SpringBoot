@@ -1,0 +1,13 @@
+package com.address.spring.model;
+
+public class AddressBookData {
+    private int id;
+    private String name;
+    private String address;
+	public void setId(int i) {
+		// TODO Auto-generated method stub
+		
+	}
+
+   
+}

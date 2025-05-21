@@ -1,0 +1,53 @@
+package com.address.spring.service;
+
+import com.address.spring.dto.AddressBookDto;
+import com.address.spring.model.AddressBookData;
+import org.springframework.stereotype.Service;
+import java.util.*;
+
+@Service
+public abstract class AddressBookServiceImpl implements AddressBookService {
+
+    private List<AddressBookData> list = new ArrayList<>();
+    private int idCounter = 1;
+
+    @Override
+    public AddressBookData createAddress(AddressBookDto dto) {
+        AddressBookData data = new AddressBookData();
+        data.setId(idCounter++);
+        data.setName(dto.getName());
+        data.setAddress(dto.getAddress());
+        list.add(data);
+        return data;
+    }
+
+    @Override
+    public List<AddressBookData> getAllData() {
+        return list;
+    }
+
+    @Override
+    public AddressBookData getById(int id) {
+        return list.stream().filter(d -> d.getId() == id).findFirst().orElse(null);
+    }
+
+    @Override
+    public AddressBookData updateById(int id, AddressBookDto dto) {
+        AddressBookData data = getById(id);
+        if (data != null) {
+            data.setName(dto.getName());
+            data.setAddress(dto.getAddress());
+        }
+        return data;
+    }
+
+    @Override
+    public String deleteById(int id) {
+        AddressBookData data = getById(id);
+        if (data != null) {
+            list.remove(data);
+            return "Deleted";
+        }
+        return "Not Found";
+    }
+}

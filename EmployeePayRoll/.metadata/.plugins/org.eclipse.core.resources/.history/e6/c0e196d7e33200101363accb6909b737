@@ -1,0 +1,5 @@
+package com.employee.employeepayroll.model;
+
+public class Employee {
+
+}

@@ -1,0 +1,5 @@
+package com.address.spring.service;
+
+public class AddressBookServiceImpl {
+
+}

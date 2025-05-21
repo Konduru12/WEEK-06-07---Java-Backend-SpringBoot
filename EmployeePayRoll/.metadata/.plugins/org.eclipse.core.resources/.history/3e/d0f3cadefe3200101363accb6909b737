@@ -1,0 +1,5 @@
+package com.address.spring.dto;
+
+public class AddressBookDto {
+
+}
